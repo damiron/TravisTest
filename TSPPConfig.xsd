@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://www.example.org/TSPPConfiguration"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:d="http://www.example.org/Design"
+        targetNamespace="http://www.example.org/TSPPConfiguration"
+        elementFormDefault="qualified">
+  <xs:complexType name="General">
+      <xs:sequence>
+            <xs:element name="HostMachineExternalIP" type="xs:string"/>
+            <xs:element name="HostMachinePort" type="xs:positiveInteger"/>
+            <xs:element name="PlcIP" type="xs:string"/>
+            <xs:element name="PlcPort" type="xs:positiveInteger"/>
+            <xs:element name="LogLevel" type="xs:string"/> 
+      </xs:sequence>
+   </xs:complexType>  
+  	
+   <xs:complexType name="TSPPServerConfig">
+      <xs:sequence>
+         <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="General" type="tns:General"/>
+         </xs:choice>
+      </xs:sequence>
+   </xs:complexType>
+   <xs:element name="TSPPServerConfig" type="tns:TSPPServerConfig"/>
+</schema>

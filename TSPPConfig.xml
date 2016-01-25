@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:TSPPServerConfig xmlns:tns="http://www.example.org/TSPPConfiguration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/TSPPConfiguration ./TSPPConfig.xsd ">
+<tns:General>
+	<tns:HostMachineExternalIP>188.184.7.48</tns:HostMachineExternalIP>
+	<tns:HostMachinePort>8502</tns:HostMachinePort>
+	<tns:PlcIP>137.138.25.78</tns:PlcIP>
+	<tns:PlcPort>502</tns:PlcPort>
+	<tns:LogLevel>INF</tns:LogLevel>
+</tns:General>
+</tns:TSPPServerConfig>
