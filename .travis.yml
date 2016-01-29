@@ -1,0 +1,7 @@
+language: cpp
+compiler: gcc
+before-install:
+ - sudo apt-get install apt-cache
+ - sudo apt-cache update
+script: 
+ - apt-cache search libboost
