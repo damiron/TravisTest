@@ -3,9 +3,12 @@ compiler: gcc
 before-install:
 script: 
  - sudo sh -c "echo 'foreign-architecture i386' > /etc/dpkg/dpkg.cfg.d/multiarch"
- - sudo dpkg --add-architecture i386
- - sudo apt-get -qq update
- - sudo apt-get install -y libxml2-dev libxerces-c-dev python-svn python-lxml astyle libboost-all-dev libboost-all-dev:i386 cmake xsdcxx default-jre libssl-dev
+ #- sudo dpkg --add-architecture i386
+ - sudo apt-get -qq update && apt-get upgrade
+ - sudo apt-get install -y libxml2-dev libxerces-c-dev python-svn python-lxml astyle cmake xsdcxx default-jre libssl-dev
+ - sudo apt-get install -y libboost-all-dev
+ - sudo apt-get install -y libboost-all-dev:i386
+ 
  - wget --no-check-certificate https://cmake.org/files/v2.8/cmake-2.8.12.2.tar.gz
  - tar -xzvf cmake-2.8.12.2.tar.gz 
  - cd cmake-2.8.12.2
@@ -13,7 +16,7 @@ script:
  - make      
  - sudo make install
  - cd ..
- - wget --no-check-certificate https://cernbox.cern.ch/index.php/s/nYKgDvAwmSVnMLx/download
+ - wget --no-check-certificate https://cernbox.cern.ch/index.php/s/nYKgDvAwmSVnMLx/download#this is not a permanent link! At some point it may stop working
  - tar -xzvf download
  - sudo cp -R sdk/ /opt/OpcUaToolkit-1.3.3-evaluation/
  #- apt-cache search libboost
