@@ -2,6 +2,7 @@ language: cpp
 compiler: gcc
 before-install:
 script: 
+ - ls /etc/dpkg/dpkg.cfg.d/
  - sudo dpkg --add-architecture i386
  - sudo apt-get -qq update
  - sudo apt-get install -y libxml2-dev libxerces-c-dev python-svn python-lxml astyle libboost-all-dev libboost-all-dev:i386 cmake xsdcxx default-jre libssl-dev
