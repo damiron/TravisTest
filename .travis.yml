@@ -7,22 +7,26 @@ script:
  - g++ --version
  - which g++
  - gcc --version
- - gcc
  - which gcc
  #- sudo dpkg --add-architecture i386
  - sudo apt-get -qq update
  #- sudo DEBIAN_FRONTEND=noninteractive apt-get -q --yes --force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
+ - gcc --version
  - sudo apt-get install -y libxml2-dev libxerces-c-dev python-svn python-lxml astyle cmake xsdcxx default-jre libssl-dev build-essential
+ - gcc --version
  - sudo apt-get install -y libboost-all-dev
+ - gcc --version
  - sudo sh -c "echo 'foreign-architecture i386' > /etc/dpkg/dpkg.cfg.d/multiarch"
+ - gcc --version
  - sudo apt-get -f install
+ - gcc --version
  - sudo aptitude install -y libboost-all-dev:i386
- 
+ - gcc --version
  - wget --no-check-certificate https://cmake.org/files/v2.8/cmake-2.8.12.2.tar.gz
  - tar -xzvf cmake-2.8.12.2.tar.gz 
+ - gcc --version
  - cd cmake-2.8.12.2
  - gcc --version
- - gcc
  - export PATH=$PATH:/opt/bin
  - CC=gcc bash -c './bootstrap'
  - cat /home/travis/build/damiron/TravisTest/cmake-2.8.12.2/Bootstrap.cmk/cmake_bootstrap.log
