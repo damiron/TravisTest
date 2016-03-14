@@ -4,6 +4,7 @@ before-install:
 script: 
  #- sudo dpkg --add-architecture i386
  - sudo apt-get -qq update
+ - sudo apt-get -f install
  - sudo DEBIAN_FRONTEND=noninteractive apt-get -q --yes --force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
  - sudo apt-get install -y libxml2-dev libxerces-c-dev python-svn python-lxml astyle cmake xsdcxx default-jre libssl-dev
  - sudo apt-get install -y libboost-all-dev
