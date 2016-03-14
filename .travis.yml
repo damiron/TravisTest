@@ -22,7 +22,7 @@ script:
  - cd cmake-2.8.12.2
  - export PATH=$PATH:/opt/bin
  - CC=/usr/bin/gcc bash -c './bootstrap'
- - cat cmake_bootstrap.log
+ - cat /home/travis/build/damiron/TravisTest/cmake-2.8.12.2/Bootstrap.cmk/cmake_bootstrap.log
  - make      
  - sudo make install
  - cd ..
