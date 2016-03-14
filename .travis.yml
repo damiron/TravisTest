@@ -2,7 +2,7 @@ language: cpp
 compiler: gcc
 before-install:
 script: 
-
+ - /opt/bin/gcc --version
  - g++ --version
  - which g++
  - gcc --version
@@ -19,6 +19,7 @@ script:
  - wget --no-check-certificate https://cmake.org/files/v2.8/cmake-2.8.12.2.tar.gz
  - tar -xzvf cmake-2.8.12.2.tar.gz 
  - cd cmake-2.8.12.2
+ - export PATH=$PATH:/opt/bin
  - CC=gcc bash -c './bootstrap'
  - make      
  - sudo make install
