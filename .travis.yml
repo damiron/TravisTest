@@ -3,6 +3,7 @@ compiler: gcc
 before-install:
 script: 
  - /usr/bin/gcc --version
+ - ls -l /usr/bin/gcc
  - g++ --version
  - which g++
  - gcc --version
