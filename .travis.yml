@@ -4,7 +4,7 @@ before-install:
 script: 
  #- sudo dpkg --add-architecture i386
  - sudo apt-get -qq update
- - sudo apt-get -q -y upgrade
+ - sudo DEBIAN_FRONTEND=noninteractive apt-get -q --yes --force-yes upgrade
  - sudo apt-get install -y libxml2-dev libxerces-c-dev python-svn python-lxml astyle cmake xsdcxx default-jre libssl-dev
  - sudo apt-get install -y libboost-all-dev
  - sudo sh -c "echo 'foreign-architecture i386' > /etc/dpkg/dpkg.cfg.d/multiarch"
