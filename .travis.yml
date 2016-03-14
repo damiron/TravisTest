@@ -7,6 +7,7 @@ script:
  - g++ --version
  - which g++
  - gcc --version
+ - gcc
  - which gcc
  #- sudo dpkg --add-architecture i386
  - sudo apt-get -qq update
@@ -20,6 +21,8 @@ script:
  - wget --no-check-certificate https://cmake.org/files/v2.8/cmake-2.8.12.2.tar.gz
  - tar -xzvf cmake-2.8.12.2.tar.gz 
  - cd cmake-2.8.12.2
+ - gcc --version
+ - gcc
  - export PATH=$PATH:/opt/bin
  - CC=gcc bash -c './bootstrap'
  - cat /home/travis/build/damiron/TravisTest/cmake-2.8.12.2/Bootstrap.cmk/cmake_bootstrap.log
