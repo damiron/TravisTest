@@ -2,12 +2,6 @@ language: cpp
 compiler: gcc
 before-install:
 script: 
- - /usr/bin/gcc --version
- - ls -l /usr/bin/gcc
- - g++ --version
- - which g++
- - gcc --version
- - which gcc
  #- sudo dpkg --add-architecture i386
  - sudo apt-get -qq update
  #- sudo DEBIAN_FRONTEND=noninteractive apt-get -q --yes --force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
@@ -21,16 +15,10 @@ script:
  - sudo make install
  - cd ..
  - sudo sh -c "echo 'foreign-architecture i386' > /etc/dpkg/dpkg.cfg.d/multiarch"
+ # not sure if boost 32 bit is needed for the trial build, but installing this seems to break the compilers
  #- sudo aptitude install -y libboost-all-dev:i386 build-essential:i386
  - sudo apt-get -f install
  #this is not a permanent link! At some point it may stop working
  - wget --no-check-certificate https://cernbox.cern.ch/index.php/s/nYKgDvAwmSVnMLx/download
  - tar -xzvf download
  - sudo cp -R sdk/ /opt/OpcUaToolkit-1.3.3-evaluation/
- - /usr/bin/gcc --version
- - ls -l /usr/bin/gcc
- - g++ --version
- - which g++
- - gcc --version
- - which gcc
- #- apt-cache search libboost
