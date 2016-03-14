@@ -2,6 +2,11 @@ language: cpp
 compiler: gcc
 before-install:
 script: 
+
+ - g++ --version
+ - which g++
+ - gcc --version
+ - which gcc
  #- sudo dpkg --add-architecture i386
  - sudo apt-get -qq update
  #- sudo DEBIAN_FRONTEND=noninteractive apt-get -q --yes --force-yes -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
