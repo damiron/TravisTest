@@ -1,8 +1,5 @@
 language: cpp
 compiler: gcc
-notifications:
-  email:
-    - quasar-developers@cern.ch
 before-install:
 script: 
  #- sudo dpkg --add-architecture i386
